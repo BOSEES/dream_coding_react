@@ -28,6 +28,8 @@ class Habits extends React.Component {
             <Habit 
             key={habit.id} 
             habit={habit}
+            name={habit.name}
+            count={habit.count}
             onIncrement={this.handleIncrement} 
             onDecrement={this.handleDecrement} 
             onDelete={this.handleDelite} 

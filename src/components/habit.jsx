@@ -1,6 +1,6 @@
 import React from "react";
 
-class Habit extends React.Component {
+class Habit extends React.PureComponent {
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit)
   };
@@ -13,7 +13,8 @@ class Habit extends React.Component {
     this.props.onDelete(this.props.habit)
   }
   render() {
-    const { name , count } = this.props.habit;
+    const { name } = this.props.habit;
+    const { count } = this.props;
     return (
       <li className="habit">
       <span className="habit-name">{name}</span>
